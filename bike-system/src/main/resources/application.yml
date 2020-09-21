@@ -1,0 +1,53 @@
+server:
+  port: 8000
+  servlet:
+    context-path: /api
+
+spring:
+  profiles:
+    active: dev
+
+  redis:
+    isEnable: false
+    database: 0
+    host: 39.106.86.123
+    port: 6379
+    password:
+    jedis:
+      pool:
+        max-idle: 8
+        min-idle: 1
+        max-wait: -1
+        max-active: 8
+
+  # 配置邮箱
+  mail:
+    host: smtp.163.com
+    username: laura0722@163.com
+    password: MYPMJHYDBMKTWDKS
+    default-encoding: utf-8
+    nickname: 统一用户管理平台
+    properties:
+      smtp:
+        starttls:
+          enable: true
+          required: true
+        auth: true
+      mail:
+        smtp:
+          ssl:
+            enable: false
+    port: 25
+
+#  session:
+#    store-type: redis
+#    timeout: 30000
+
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+  type-aliases-package: com.bdilab.com.bdilab.bikemanagement.model
+  configuration:
+    map-underscore-to-camel-case: true
+    use-generated-keys: true
+    cache-enabled: false
+

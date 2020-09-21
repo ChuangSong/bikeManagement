@@ -1,0 +1,32 @@
+#配置数据源
+spring:
+  datasource:
+    druid:
+      db-type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:mysql://39.106.86.123:3306/bikemanagement?useUnicode=true&serverTimeZone=GMT&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: 123456
+      initial-size: 3 # 初始化配置
+      max-active: 15 # 最大连接数
+      min-idle: 3 # 最小连接数
+      max-wait: 5000 # 获取连接超时时间
+      filter:
+
+
+  # 配置jpa
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch
+      cluster-nodes: localhost:9300
+
+# 是否开启swagger
+swagger:
+  enabled: true

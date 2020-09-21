@@ -1,0 +1,5 @@
+spring:
+  data:
+    elasticsearch:
+      cluster-name: bikeInfo
+      cluster-nodes: 127.0.0.1:9300 # es连接端口号
