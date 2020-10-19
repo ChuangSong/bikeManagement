@@ -26,8 +26,9 @@ public class GlobalExceptionHandler {
         return buildResponseEntity(ApiError.error(e.getMessage()));
     }
 
+
     /**
-     * 处理错误请求异常
+     * 处理请求错误异常
      * @param e
      * @return
      */

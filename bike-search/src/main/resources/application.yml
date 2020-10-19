@@ -1,5 +1,6 @@
 spring:
   data:
     elasticsearch:
-      cluster-name: bikeInfo
+      cluster-name: elasticsearch # es集群名称
       cluster-nodes: 127.0.0.1:9300 # es连接端口号
+
